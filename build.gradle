@@ -1,0 +1,32 @@
+group 'com.vinaylogics'
+version '1.0-SNAPSHOT'
+
+allprojects {
+    apply plugin: "java"
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        def junit5_version = "5.7.0-M1"
+        // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
+        testCompile "org.junit.jupiter:junit-jupiter-api:$junit5_version"
+        // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine
+        testCompile "org.junit.jupiter:junit-jupiter-engine:$junit5_version"
+
+    }
+}
+
+
+subprojects {
+
+    repositories {
+        mavenCentral()
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+
+}
+
+

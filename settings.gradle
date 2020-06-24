@@ -1,0 +1,5 @@
+rootProject.name = 'PlayWithJava'
+include 'design-patterns'
+include 'data-structures'
+include 'algorithms'
+
