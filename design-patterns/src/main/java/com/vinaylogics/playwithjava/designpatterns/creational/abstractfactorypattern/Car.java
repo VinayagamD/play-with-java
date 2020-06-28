@@ -50,4 +50,12 @@ public abstract class Car {
                 ", location=" + location +
                 '}';
     }
+
+    public enum CarType {
+        MICRO, MINI, LUXURY
+    }
+
+    public enum Location {
+        DEFAULT, INDIA, USA
+    }
 }

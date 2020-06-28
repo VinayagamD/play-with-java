@@ -12,6 +12,9 @@ allprojects {
         testCompile "org.junit.jupiter:junit-jupiter-api:$junit5_version"
         // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine
         testCompile "org.junit.jupiter:junit-jupiter-engine:$junit5_version"
+        // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params
+        testCompile "org.junit.jupiter:junit-jupiter-params:$junit5_version"
+
 
     }
 }

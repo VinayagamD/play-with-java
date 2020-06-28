@@ -4,6 +4,8 @@ import com.vinaylogics.playwithjava.designpatterns.creational.exceptions.Factory
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.EnumSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -30,28 +32,24 @@ class VehicleFactoryTest {
     }
 
     @DisplayName("Test Case for Two wheeler creation")
-    @Test
-    public void testCreate_TwoWheeler(){
-        Vehicle actual = new TwoWheeler();
-        Vehicle expected = factory.create(Vehicle.VehicleType.TWO_WHEELER);
-        assertNotNull(expected);
-        assertEquals(actual.getVehicle(),expected.getVehicle());
-    }
-
-    @DisplayName("Test Case for Three wheeler creation")
-    @Test
-    public void testCreate_ThreeWheeler(){
-        Vehicle actual = new ThreeWheeler();
-        Vehicle expected = factory.create(Vehicle.VehicleType.THREE_WHEELER);
-        assertNotNull(expected);
-        assertEquals(actual.getVehicle(),expected.getVehicle());
-    }
-
-    @DisplayName("Test Case for Four wheeler creation")
-    @Test
-    public void testCreate_FourWheeler(){
-        Vehicle actual = new FourWheeler();
-        Vehicle expected = factory.create(Vehicle.VehicleType.FOUR_WHEELER);
+    @ParameterizedTest(name = "{index} => type=''{0}''")
+    @EnumSource(value = Vehicle.VehicleType.class, names = {"TWO_WHEELER", "THREE_WHEELER", "FOUR_WHEELER"})
+    public void testCreate(Vehicle.VehicleType type){
+        Vehicle actual = null;
+        switch (type){
+            case TWO_WHEELER:
+                actual = new TwoWheeler();
+                break;
+            case THREE_WHEELER:
+                actual = new ThreeWheeler();
+                break;
+            case FOUR_WHEELER:
+                actual = new FourWheeler();
+                break;
+            default:
+                fail("Invalid type passed");
+        }
+        Vehicle expected = factory.create(type);
         assertNotNull(expected);
         assertEquals(actual.getVehicle(),expected.getVehicle());
     }
