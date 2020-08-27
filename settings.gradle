@@ -2,4 +2,7 @@ rootProject.name = 'PlayWithJava'
 include 'design-patterns'
 include 'data-structures'
 include 'algorithms'
+include 'jni'
+include 'JavaProcess'
+include 'BaseLearn'
 
