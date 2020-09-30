@@ -7,7 +7,7 @@ public class CarFactory {
     private CarFactory(){}
 
     public static Car buildCard(Car.Location location, Car.CarType type){
-        Car car = null;
+        Car car;
         switch (location){
             case USA:
                 car = USACarFactory.buildCar(type);
