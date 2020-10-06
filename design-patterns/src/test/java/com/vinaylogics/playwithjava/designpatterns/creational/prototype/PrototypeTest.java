@@ -1,8 +1,6 @@
-package com.vinaylogics.playwithjava.designpatterns.structural.prototype;
+package com.vinaylogics.playwithjava.designpatterns.creational.prototype;
 
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class PrototypeTest {
 

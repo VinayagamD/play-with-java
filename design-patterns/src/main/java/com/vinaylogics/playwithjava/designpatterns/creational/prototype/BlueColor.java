@@ -1,4 +1,4 @@
-package com.vinaylogics.playwithjava.designpatterns.structural.prototype;
+package com.vinaylogics.playwithjava.designpatterns.creational.prototype;
 
 public class BlueColor extends Color{
 
