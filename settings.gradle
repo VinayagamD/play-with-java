@@ -11,4 +11,7 @@ include 'multithreading:corethread'
 findProject(':multithreading:corethread')?.name = 'corethread'
 include 'multithreading:concurrent-thread'
 findProject(':multithreading:concurrent-thread')?.name = 'concurrent-thread'
+include 'springbootlearn'
+include 'springbootlearn:spring-boot-elastic-search-tutorial'
+findProject(':springbootlearn:spring-boot-elastic-search-tutorial')?.name = 'spring-boot-elastic-search-tutorial'
 
