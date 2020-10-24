@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'com.vinaylogics'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/io.reactivex.rxjava3/rxjava
+    implementation group: 'io.reactivex.rxjava3', name: 'rxjava', version: '3.0.7'
+    // https://mvnrepository.com/artifact/org.reactivestreams/reactive-streams
+    implementation group: 'org.reactivestreams', name: 'reactive-streams', version: '1.0.3'
+    // https://mvnrepository.com/artifact/org.reactivestreams/reactive-streams-tck
+    testImplementation group: 'org.reactivestreams', name: 'reactive-streams-tck', version: '1.0.3'
+    // https://mvnrepository.com/artifact/org.reactivestreams/reactive-streams-tck-flow
+    testImplementation group: 'org.reactivestreams', name: 'reactive-streams-tck-flow', version: '1.0.3'
+
+}
+
+test{
+
+}

@@ -7,15 +7,16 @@ allprojects {
         mavenCentral()
     }
     dependencies {
-        def junit5_version = "5.7.0-M1"
-        // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
-        testCompile "org.junit.jupiter:junit-jupiter-api:$junit5_version"
-        // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine
-        testCompile "org.junit.jupiter:junit-jupiter-engine:$junit5_version"
-        // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params
-        testCompile "org.junit.jupiter:junit-jupiter-params:$junit5_version"
+        def junit5_version = "5.7.0"
+        // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter
+        testCompile group: 'org.junit.jupiter', name: 'junit-jupiter', version: "$junit5_version"
 
 
+    }
+
+    java {
+        sourceCompatibility JavaVersion.VERSION_15
+        targetCompatibility JavaVersion.VERSION_15
     }
 }
 

@@ -1,0 +1,12 @@
+group 'com.vinaylogics'
+version '1.0-SNAPSHOT'
+
+subprojects {
+
+    dependencies {
+        // https://mvnrepository.com/artifact/org.hibernate/hibernate-core
+        implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.4.21.Final'
+        // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+        implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.20'
+    }
+}

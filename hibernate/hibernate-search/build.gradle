@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+}
+
+group 'com.vinaylogics'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // https://mvnrepository.com/artifact/org.hibernate/hibernate-search-orm
+    implementation group: 'org.hibernate', name: 'hibernate-search-orm', version: '5.11.5.Final'
+
+}
