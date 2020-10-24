@@ -1,0 +1,24 @@
+group 'com.vinaylogics'
+version '1.0-SNAPSHOT'
+
+subprojects {
+
+    apply plugin: 'java-library'
+
+    repositories {
+        mavenCentral()
+    }
+
+    configurations {
+        compile.exclude module: 'spring-boot-starter-tomcat'
+    }
+
+    dependencies {
+        implementation 'org.springframework.boot:spring-boot-starter-rsocket'
+        implementation 'org.springframework.boot:spring-boot-starter-webflux'
+        compileOnly 'org.projectlombok:lombok'
+        developmentOnly 'org.springframework.boot:spring-boot-devtools'
+        annotationProcessor 'org.projectlombok:lombok'
+        testImplementation 'io.projectreactor:reactor-test'
+    }
+}
