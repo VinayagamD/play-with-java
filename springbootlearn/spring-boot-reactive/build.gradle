@@ -5,7 +5,9 @@ plugins {
 group 'com.vinaylogics'
 version '1.0-SNAPSHOT'
 
-
+configurations {
+    compile.exclude module: 'spring-boot-starter-tomcat'
+}
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
